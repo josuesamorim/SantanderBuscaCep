@@ -15,5 +15,6 @@ struct HistoryView: View {
             Text(item)
         }
         .navigationBarTitle("Histórico de CEP")
+        .foregroundColor(.blue)
     }
 }
