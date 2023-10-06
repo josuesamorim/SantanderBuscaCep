@@ -10,24 +10,13 @@ import SwiftUI
 struct HeaderView: View {
     
     var body: some View {
-        VStack {
-            HStack {
-                Image("Logo_Santander_White")
-            }
-
-            HStack {
-                Text("Pesquisar CEP")
-                    .bold()
-                    .foregroundColor(.white)
-                    .font(.system(size: 25))
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 20)
-            //.padding(.top, 20)
-            .padding(.top, 5)
+        
+        HStack {
+            Image("Logo_Santander_White")
         }
-        .frame(maxWidth: .infinity, maxHeight: 150)
+        .frame(maxWidth: .infinity, maxHeight: 80)
         .background(Color("santanderColor"))
+        
     }
 }
 
