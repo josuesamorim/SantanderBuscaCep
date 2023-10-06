@@ -17,7 +17,3 @@ struct HistoryView: View {
         .navigationBarTitle("Histórico de CEP")
     }
 }
-
-//#Preview {
-//    HistoryView()
-//}

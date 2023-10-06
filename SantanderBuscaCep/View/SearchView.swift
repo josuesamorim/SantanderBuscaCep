@@ -6,62 +6,64 @@
 //
 
 import SwiftUI
-
-import SwiftUI
 import Combine
 
 struct SearchView: View {
     @State private var cep = ""
     @State private var resultText = ""
-    @State private var history: [String] = [] // Histórico agora é uma array de strings
-    @State  var showingHistory = false // Flag para mostrar a tela de histórico
+    @State private var history: [String] = []
+    @State var showingHistory = false
     @State private var cancellables: Set<AnyCancellable> = []
-    @ObservedObject var cepViewModel = CEPViewModel() // Use o ViewModel
+    @ObservedObject var cepViewModel = CEPViewModel()
     
     var body: some View {
-        NavigationView {
-            
-            
-            
-            VStack {
+        
+        
+
+
+            NavigationView {
                 
-                HeaderView()
-                
-                Spacer(minLength: 10)
-                
-                Text(cepViewModel.resultText)
-                    .padding()
-                
-                TextField("Digite um CEP", text: $cep)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                    .onReceive(Just(cep).debounce(for: 0.5, scheduler: RunLoop.main)) { _ in
+                VStack {
+                    
+                    Text(cepViewModel.resultText)
+                        .padding()
+                    
+                    TextField("Digite um CEP", text: $cep)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                        .onReceive(Just(cep).debounce(for: 0.5, scheduler: RunLoop.main)) { _ in
+                            fetchAndHandleCep(cep: cep)
+                        }
+                        .keyboardType(.numberPad)
+                    
+                    
+                    Button("Pesquisar") {
                         fetchAndHandleCep(cep: cep)
                     }
-                
-                Button("Pesquisar") {
-                    fetchAndHandleCep(cep: cep)
+                    .padding()
+                    .background(Color.santander)
+                    .cornerRadius(3.0)
+                    .foregroundColor(.white)
+                    
                 }
-                .padding()
                 
-                
-                
-            }
-            //.navigationBarTitle("Consulta de CEP")
-            .navigationBarItems(trailing: Button("Histórico") {
-                showingHistory = true
-            })
-            .foregroundColor(.white)
-            .sheet(isPresented: $showingHistory) {
-                NavigationView {
-                    HistoryView(history: $cepViewModel.history)
+                .navigationBarItems(trailing: Button("Histórico") {
+                    showingHistory = true
+                })
+                .foregroundColor(.black)
+                .sheet(isPresented: $showingHistory) {
+                    NavigationView {
+                        HistoryView(history: $cepViewModel.history)
+                    }
                 }
             }
+            .onAppear {
+                cepViewModel.history = UserDefaults.standard.stringArray(forKey: "CEPHistory") ?? []
+            }
         }
-        .onAppear {
-            cepViewModel.history = UserDefaults.standard.stringArray(forKey: "CEPHistory") ?? []
-        }
-    }
+        //.background(.santanderGray).ignoresSafeArea(.all)
+    
+        
     
     func fetchAndHandleCep(cep: String) {
         Api.fetchAndHandleCep(cep: cep, viewModel: cepViewModel)
@@ -72,6 +74,7 @@ struct SearchView: View {
         return Api.fetchCep(cep: cep)
     }
 }
+
 
 #Preview {
     SearchView()
