@@ -14,56 +14,55 @@ struct SearchView: View {
     @State private var history: [String] = []
     @State var showingHistory = false
     @State private var cancellables: Set<AnyCancellable> = []
+    @State private var isEditing: Bool = false
     @ObservedObject var cepViewModel = CEPViewModel()
     
     var body: some View {
-        
-        
-
-
-            NavigationView {
+        NavigationView {
+            
+            VStack {
                 
-                VStack {
-                    
-                    Text(cepViewModel.resultText)
-                        .padding()
-                    
-                    TextField("Digite um CEP", text: $cep)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding()
-                        .onReceive(Just(cep).debounce(for: 0.5, scheduler: RunLoop.main)) { _ in
-                            fetchAndHandleCep(cep: cep)
-                        }
-                        .keyboardType(.numberPad)
-                    
-                    
-                    Button("Pesquisar") {
+                Text(cepViewModel.resultText)
+                    .padding()
+                
+                TextField("Digite um CEP", text: $cep)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                    .onReceive(Just(cep).debounce(for: 0.5, scheduler: RunLoop.main)) { _ in
                         fetchAndHandleCep(cep: cep)
                     }
-                    .padding()
-                    .background(Color.santander)
-                    .cornerRadius(3.0)
-                    .foregroundColor(.white)
-                    
-                }
+                    .keyboardType(.numberPad)
+                    .onTapGesture { isEditing = true }
                 
-                .navigationBarItems(trailing: Button("Histórico") {
-                    showingHistory = true
-                })
-                .foregroundColor(.black)
-                .sheet(isPresented: $showingHistory) {
-                    NavigationView {
-                        HistoryView(history: $cepViewModel.history)
-                    }
+                
+                Button("Pesquisar") {
+                    fetchAndHandleCep(cep: cep)
+                    hideKeyboard()
                 }
+                .padding()
+                .background(Color.santander)
+                .cornerRadius(3.0)
+                .foregroundColor(.white)
+                
             }
-            .onAppear {
-                cepViewModel.history = UserDefaults.standard.stringArray(forKey: "CEPHistory") ?? []
+            
+            .navigationBarItems(trailing: Button("Histórico") {
+                showingHistory = true
+            })
+            .foregroundColor(.black)
+            .sheet(isPresented: $showingHistory) {
+                NavigationView {
+                    HistoryView(history: $cepViewModel.history)
+                }
             }
         }
-        //.background(.santanderGray).ignoresSafeArea(.all)
+        .onAppear {
+            cepViewModel.history = UserDefaults.standard.stringArray(forKey: "CEPHistory") ?? []
+        }
+    }
+    //.background(.santanderGray).ignoresSafeArea(.all)
     
-        
+    
     
     func fetchAndHandleCep(cep: String) {
         Api.fetchAndHandleCep(cep: cep, viewModel: cepViewModel)
@@ -73,8 +72,14 @@ struct SearchView: View {
     func fetchCep(cep: String) -> AnyPublisher<CEPResponseModel, Error> {
         return Api.fetchCep(cep: cep)
     }
+    
+    func hideKeyboard() {
+        if isEditing {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            isEditing = false
+        }
+    }
 }
-
 
 #Preview {
     SearchView()
