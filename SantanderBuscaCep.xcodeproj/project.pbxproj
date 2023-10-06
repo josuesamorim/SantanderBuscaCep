@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9937570E2AD026F200ADE14C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9937570D2AD026F200ADE14C /* TabBarView.swift */; };
+		993757102AD028A800ADE14C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9937570F2AD028A800ADE14C /* AboutView.swift */; };
 		99591C952ACEDD0B00CFB19B /* SantanderBuscaCepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99591C942ACEDD0B00CFB19B /* SantanderBuscaCepApp.swift */; };
 		99591C972ACEDD0B00CFB19B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99591C962ACEDD0B00CFB19B /* ContentView.swift */; };
 		99591C992ACEDD0E00CFB19B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99591C982ACEDD0E00CFB19B /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9937570D2AD026F200ADE14C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		9937570F2AD028A800ADE14C /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		99591C912ACEDD0B00CFB19B /* SantanderBuscaCep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SantanderBuscaCep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99591C942ACEDD0B00CFB19B /* SantanderBuscaCepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantanderBuscaCepApp.swift; sourceTree = "<group>"; };
 		99591C962ACEDD0B00CFB19B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9937570A2AD01BFF00ADE14C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		99591C882ACEDD0B00CFB19B = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +74,7 @@
 		99591C932ACEDD0B00CFB19B /* SantanderBuscaCep */ = {
 			isa = PBXGroup;
 			children = (
+				9937570A2AD01BFF00ADE14C /* ViewModel */,
 				99591CA52ACEDD3700CFB19B /* View */,
 				99591CA42ACEDD3000CFB19B /* API */,
 				99591CA22ACEDD1800CFB19B /* Model */,
@@ -105,6 +117,8 @@
 				99591CAC2ACEDDB400CFB19B /* HistoryView.swift */,
 				99591CAE2ACEDDD700CFB19B /* HeaderView.swift */,
 				99591CB02ACEDE6900CFB19B /* SearchView.swift */,
+				9937570D2AD026F200ADE14C /* TabBarView.swift */,
+				9937570F2AD028A800ADE14C /* AboutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,9 +197,11 @@
 				99591CAD2ACEDDB400CFB19B /* HistoryView.swift in Sources */,
 				99591CA92ACEDD6C00CFB19B /* CEPViewModel.swift in Sources */,
 				99591C972ACEDD0B00CFB19B /* ContentView.swift in Sources */,
+				993757102AD028A800ADE14C /* AboutView.swift in Sources */,
 				99591CB12ACEDE6900CFB19B /* SearchView.swift in Sources */,
 				99591CAB2ACEDD8D00CFB19B /* Api.swift in Sources */,
 				99591C952ACEDD0B00CFB19B /* SantanderBuscaCepApp.swift in Sources */,
+				9937570E2AD026F200ADE14C /* TabBarView.swift in Sources */,
 				99591CAF2ACEDDD700CFB19B /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

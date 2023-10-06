@@ -3,4 +3,129 @@
    uuid = "CA30D506-0074-4FFE-8DD2-41B432C295D9"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE1B4FF2-FF3D-48DA-8534-BC299B574F75"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SantanderBuscaCep/View/SearchView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "DE1B4FF2-FF3D-48DA-8534-BC299B574F75 - bfd85cd5c50c591a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in SantanderBuscaCep.SearchView.body.getter : some"
+                  moduleName = "SantanderBuscaCep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josueamorim/Documents/Santander%20Bootcamp/SantanderBuscaCep/SantanderBuscaCep/View/SearchView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "732">
+               </Location>
+               <Location
+                  uuid = "DE1B4FF2-FF3D-48DA-8534-BC299B574F75 - e3ff87018625a425"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.keyboardType(__C.UIKeyboardType) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in SantanderBuscaCep.SearchView.body.getter : some"
+                  moduleName = "SantanderBuscaCep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josueamorim/Documents/Santander%20Bootcamp/SantanderBuscaCep/SantanderBuscaCep/View/SearchView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "928">
+               </Location>
+               <Location
+                  uuid = "DE1B4FF2-FF3D-48DA-8534-BC299B574F75 - 5ca48954cdaca253"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SantanderBuscaCep.SearchView.body.getter : some"
+                  moduleName = "SantanderBuscaCep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josueamorim/Documents/Santander%20Bootcamp/SantanderBuscaCep/SantanderBuscaCep/View/SearchView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  uuid = "DE1B4FF2-FF3D-48DA-8534-BC299B574F75 - fad08e13611415af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0)&gt; in SantanderBuscaCep.SearchView.body.getter : some"
+                  moduleName = "SantanderBuscaCep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josueamorim/Documents/Santander%20Bootcamp/SantanderBuscaCep/SantanderBuscaCep/View/SearchView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "460">
+               </Location>
+               <Location
+                  uuid = "DE1B4FF2-FF3D-48DA-8534-BC299B574F75 - 5ca48954cdaca253"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SantanderBuscaCep.SearchView.body.getter : some"
+                  moduleName = "SantanderBuscaCep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josueamorim/Documents/Santander%20Bootcamp/SantanderBuscaCep/SantanderBuscaCep/View/SearchView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  uuid = "DE1B4FF2-FF3D-48DA-8534-BC299B574F75 - 10784b64e3c5548a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in SantanderBuscaCep.SearchView.body.getter : some"
+                  moduleName = "SantanderBuscaCep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josueamorim/Documents/Santander%20Bootcamp/SantanderBuscaCep/SantanderBuscaCep/View/SearchView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "464">
+               </Location>
+               <Location
+                  uuid = "DE1B4FF2-FF3D-48DA-8534-BC299B574F75 - 5ca48954cdaca295"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SantanderBuscaCep.SearchView.body.getter : some"
+                  moduleName = "SantanderBuscaCep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josueamorim/Documents/Santander%20Bootcamp/SantanderBuscaCep/SantanderBuscaCep/View/SearchView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "464">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
