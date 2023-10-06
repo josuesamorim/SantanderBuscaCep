@@ -13,21 +13,23 @@ struct TabBarView: View {
     @State private var history: [String] = []
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            SearchView()
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Pesquisar CEP")
-                }
-                .tag(0)
-            
-            HistoryView(history: $history)
-                .tabItem {
-                    Image(systemName: "clock")
-                    Text("Histórico")
-                }
-                .tag(1)
-        }
+
+            TabView(selection: $selectedTab) {
+                SearchView()
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Pesquisar CEP")
+                    }
+                    .tag(0)
+                
+                AboutView()
+                    .tabItem {
+                        Image(systemName: "clock")
+                        Text("Sobre")
+                    }
+                    .tag(1)
+            }
+            .foregroundColor(Color.white)
     }
 }
 
